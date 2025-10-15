@@ -216,7 +216,7 @@ Simply execute each cell to:
 ## **11. Full Research Breakdown**
 
 For a complete mathematical derivation, GPU benchmarks, DDIM implementation, evaluation code, and visualizations  
- **Read the full deep dive here:** *(LinkedIn / Medium link placeholder)*
+ **Read the full deep dive here:** 
 
 ---
 
