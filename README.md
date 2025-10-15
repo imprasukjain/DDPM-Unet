@@ -1,3 +1,4 @@
+![DDPM Output](DDPM_output.png)
 # Denoising Diffusion Probabilistic Models (DDPM)
 
 This repository implements the seminal paper **["Denoising Diffusion Probabilistic Models"](https://arxiv.org/abs/2006.11239)** by *Ho et al. (2020)* in **TensorFlow**, trained on the **CelebA-64×64** dataset to generate realistic human faces.
