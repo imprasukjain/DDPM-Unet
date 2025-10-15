@@ -49,6 +49,12 @@ A **modified U-Net** serves as the backbone for the denoising function $\epsilon
 * **Timestep embedding** allows the model to adapt its behavior depending on how much noise the image currently has.
 
 ### **High-Level Architecture**
+![Unet Diagram](Unet.jpg)
+
+> **Note:**  
+> The diagram above illustrates the original U-Net architecture (Ronneberger et al., 2015) used for biomedical image segmentation.  
+> Our DDPM implementation adapts this structure for generative modeling.
+> This model operates on 64×64 images instead of 572×572
 
 ```
 Input: Noisy image x_t (64x64x3) + timestep embedding
@@ -156,7 +162,7 @@ Progressive denoising shows faces emerging from pure noise, refining from color 
 Clone the repository and open the provided Jupyter notebook:
 
 ```bash
-git clone https://github.com/<your-username>/DDPM-Unet.git
+git clone https://github.com/imprasukjain/DDPM-Unet.git
 cd DDPM-Unet
 ```
 
