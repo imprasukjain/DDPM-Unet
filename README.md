@@ -106,22 +106,7 @@ IMAGE_SIZE =64x64
 4. Compute MSE loss between `ε` and `ε_pred`
 5. Update weights
 
----
-
-## **5. GPU Benchmarking (T4 vs P100)**
-
-| Metric         | T4 GPU       | P100 GPU  | Gain             |
-| -------------- | ------------ | --------- | ---------------- |
-| Time per epoch | 13,672 sec   | 6,972 sec | **1.95× faster** |
-| Batch size     | 8            | 16        | 2×               |
-| Stability      | Frequent OOM | Stable    | More Stable      |
-
-> **Insight:** U-Net architectures are *memory bandwidth-bound*, not FLOPS-bound.
-> The P100’s 732 GB/s bandwidth significantly boosts training speed and stability.
-
----
-
-## **6. DDIM: Faster Sampling**
+## **5. DDIM: Faster Sampling**
 
 While DDPM takes ~1000 denoising steps, DDIM (Song et al., 2020) introduces a **non-Markovian deterministic process**, letting us skip timesteps (e.g., 1000 → 100 → 50 → 0).
 
@@ -136,7 +121,7 @@ While DDPM takes ~1000 denoising steps, DDIM (Song et al., 2020) introduces a **
 
 ---
 
-## **7. Results**
+## **6. Results**
 
 * **Dataset:** CelebA (202,599 images, 64×64)
 * **GPU:** NVIDIA P100 (16 GB)
@@ -156,7 +141,7 @@ Progressive denoising shows faces emerging from pure noise, refining from color 
 
 ---
 
-## **8. Installation & Usage**
+## **7. Installation & Usage**
 
 ### **Setup**
 
@@ -194,7 +179,7 @@ Simply execute each cell to:
 
 ---
 
-## **9. Key Takeaways**
+## **8. Key Takeaways**
 
 * **Mathematical elegance:** cumulative signal retention (ᾱₜ) enables exact noise control
 * **Architectural strength:** U-Net + timestep conditioning = adaptive denoising
@@ -204,7 +189,7 @@ Simply execute each cell to:
 
 ---
 
-## **10. References**
+## **9. References**
 
 1. [Ho et al., 2020 – DDPM](https://arxiv.org/abs/2006.11239)
 2. [Song et al., 2020 – DDIM](https://arxiv.org/abs/2010.02502)
@@ -213,7 +198,7 @@ Simply execute each cell to:
 
 ---
 
-## **11. Full Research Breakdown**
+## **10. Full Research Breakdown**
 
 For a complete mathematical derivation, GPU benchmarks, DDIM implementation, evaluation code, and visualizations  
  **Read the full deep dive here:** 
